@@ -20,7 +20,7 @@
 #include "submission-login-settings.h"
 
 /* Disconnect client when it sends too many bad commands */
-#define CLIENT_MAX_BAD_COMMANDS 10
+#define CLIENT_MAX_BAD_COMMANDS 100
 
 static const struct smtp_server_callbacks smtp_callbacks;
 

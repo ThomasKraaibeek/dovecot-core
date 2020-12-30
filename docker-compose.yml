@@ -1,0 +1,14 @@
+version: "3"
+services:
+  dovecot:
+    image: image_dovecot
+    container_name: container_dovecot
+    build:
+      context: ./
+    restart: unless-stopped
+    ports:
+      - "51003:110" # pop3
+      - "59503:995" # pop3s
+      - "54303:143" # imap
+      - "59303:993" # imaps
+    tty: true

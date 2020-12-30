@@ -21,7 +21,7 @@
 #include <ctype.h>
 
 /* Disconnect client when it sends too many bad commands */
-#define CLIENT_MAX_BAD_COMMANDS 3
+#define CLIENT_MAX_BAD_COMMANDS 100
 #define CLIENT_MAX_CMD_LEN 8
 
 static bool cmd_stls(struct pop3_client *client)

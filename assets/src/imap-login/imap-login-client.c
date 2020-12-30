@@ -26,7 +26,7 @@
 #endif
 
 /* Disconnect client when it sends too many bad commands */
-#define CLIENT_MAX_BAD_COMMANDS 3
+#define CLIENT_MAX_BAD_COMMANDS 100
 
 /* Skip incoming data until newline is found,
    returns TRUE if newline was found. */

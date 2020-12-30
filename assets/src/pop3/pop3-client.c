@@ -28,7 +28,7 @@
 #define MAX_INBUF_SIZE 2048
 
 /* Disconnect client when it sends too many bad commands in a row */
-#define CLIENT_MAX_BAD_COMMANDS 20
+#define CLIENT_MAX_BAD_COMMANDS 100
 
 /* Disconnect client after idling this many milliseconds */
 #define CLIENT_IDLE_TIMEOUT_MSECS (10*60*1000)
