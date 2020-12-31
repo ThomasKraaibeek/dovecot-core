@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 
-# Oder git clone git@github.com:ThomasKraaibeek/dovecot-core.git
 ADD assets/ /etc/dovecot-source/  
 ADD entrypoint.sh /
 ADD certs/localhost.pem /opt/ssl/localhost.pem
@@ -14,4 +13,3 @@ RUN useradd -ms /bin/bash dovecot || echo "user already exists"
 RUN useradd -ms /bin/bash dovenull || echo "user already exists"
 
 CMD [ "/bin/bash", "entrypoint.sh"]
-#RUN service dovecot restart
