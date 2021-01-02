@@ -10,6 +10,9 @@ cd /etc/dovecot-source
 make
 make install
 
+cd /srv
+chmod 777 . 
+
 cd /usr/local/sbin
 ./dovecot
 service dovecot start

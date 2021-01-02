@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install autotools-dev autoconf wget libtool pkg-co
 
 RUN useradd -ms /bin/bash dovecot || echo "user already exists"
 RUN useradd -ms /bin/bash dovenull || echo "user already exists"
+RUN useradd --create-home -s /sbin/nologin admin || echo "user already exists"
+RUN echo 'admin:pass' | chpasswd
 
 CMD [ "/bin/bash", "entrypoint.sh"]
 #RUN service dovecot restart
