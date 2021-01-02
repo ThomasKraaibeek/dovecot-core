@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 
-# Oder git clone git@github.com:ThomasKraaibeek/dovecot-core.git
 ADD assets/ /etc/dovecot-source/  
 ADD entrypoint.sh /
 ADD certs/localhost.pem /opt/ssl/localhost.pem
@@ -16,4 +15,3 @@ RUN useradd --create-home -s /sbin/nologin admin || echo "user already exists"
 RUN echo 'admin:pass' | chpasswd
 
 CMD [ "/bin/bash", "entrypoint.sh"]
-#RUN service dovecot restart
